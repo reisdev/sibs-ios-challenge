@@ -1,0 +1,960 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C582064F2B597B55001AB1ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C582064E2B597B55001AB1ED /* AppDelegate.m */; };
+		C58206522B597B55001AB1ED /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58206512B597B55001AB1ED /* SceneDelegate.m */; };
+		C58206552B597B55001AB1ED /* BooksListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C58206542B597B55001AB1ED /* BooksListViewController.m */; };
+		C58206582B597B55001AB1ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58206562B597B55001AB1ED /* Main.storyboard */; };
+		C582065A2B597B57001AB1ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C58206592B597B57001AB1ED /* Assets.xcassets */; };
+		C582065D2B597B57001AB1ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C582065B2B597B57001AB1ED /* LaunchScreen.storyboard */; };
+		C58206602B597B57001AB1ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C582065F2B597B57001AB1ED /* main.m */; };
+		C582066A2B597B57001AB1ED /* BooksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C58206692B597B57001AB1ED /* BooksTests.m */; };
+		C58206742B597B58001AB1ED /* BooksUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C58206732B597B58001AB1ED /* BooksUITests.m */; };
+		C58206762B597B58001AB1ED /* BooksUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C58206752B597B58001AB1ED /* BooksUITestsLaunchTests.m */; };
+		C58206882B598FB2001AB1ED /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C58206872B598FB2001AB1ED /* BookCollectionViewCell.xib */; };
+		C582068B2B599060001AB1ED /* BookCollectionViewCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = C582068A2B599060001AB1ED /* BookCollectionViewCell.mm */; };
+		C58206962B59A2F0001AB1ED /* NetworkProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C58206942B59A2F0001AB1ED /* NetworkProvider.cpp */; };
+		C58206992B59A48B001AB1ED /* BooksService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C58206972B59A48B001AB1ED /* BooksService.cpp */; };
+		C5B3C4B62B59AF1D00FF9009 /* JSONParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B3C4B42B59AF1D00FF9009 /* JSONParser.cpp */; };
+		C5B3C60A2B5AC6CC00FF9009 /* BookModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = C5B3C6092B5AC6CC00FF9009 /* BookModel.mm */; };
+		C5B3C60C2B5ADAD600FF9009 /* BookModel.h in Sources */ = {isa = PBXBuildFile; fileRef = C5B3C60B2B5ADAD600FF9009 /* BookModel.h */; };
+		C5B3C6242B5B231500FF9009 /* json_writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B3C6152B5B231500FF9009 /* json_writer.cpp */; };
+		C5B3C6252B5B231500FF9009 /* json_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B3C61A2B5B231500FF9009 /* json_reader.cpp */; };
+		C5B3C6262B5B231500FF9009 /* json_value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B3C6202B5B231500FF9009 /* json_value.cpp */; };
+		C5B3C6272B5B231500FF9009 /* json_valueiterator.inl in Resources */ = {isa = PBXBuildFile; fileRef = C5B3C6222B5B231500FF9009 /* json_valueiterator.inl */; };
+		C5B3C6582B5B23A200FF9009 /* Form.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B3C6292B5B23A200FF9009 /* Form.cpp */; };
+		C5B3C6592B5B23A200FF9009 /* Option.inl in Resources */ = {isa = PBXBuildFile; fileRef = C5B3C62B2B5B23A200FF9009 /* Option.inl */; };
+		C5B3C65A2B5B23A200FF9009 /* OptionBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B3C62C2B5B23A200FF9009 /* OptionBase.cpp */; };
+		C5B3C65B2B5B23A200FF9009 /* ThreadingFactoryMutex.inl in Resources */ = {isa = PBXBuildFile; fileRef = C5B3C62E2B5B23A200FF9009 /* ThreadingFactoryMutex.inl */; };
+		C5B3C65C2B5B23A200FF9009 /* Exception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B3C62F2B5B23A200FF9009 /* Exception.cpp */; };
+		C5B3C65D2B5B23A200FF9009 /* OptionSetter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B3C6342B5B23A200FF9009 /* OptionSetter.cpp */; };
+		C5B3C65E2B5B23A200FF9009 /* CurlHandle.inl in Resources */ = {isa = PBXBuildFile; fileRef = C5B3C6362B5B23A200FF9009 /* CurlHandle.inl */; };
+		C5B3C65F2B5B23A200FF9009 /* CurlHandle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B3C63B2B5B23A200FF9009 /* CurlHandle.cpp */; };
+		C5B3C6602B5B23A200FF9009 /* OptionSetter.inl in Resources */ = {isa = PBXBuildFile; fileRef = C5B3C63C2B5B23A200FF9009 /* OptionSetter.inl */; };
+		C5B3C6612B5B23A200FF9009 /* SList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B3C63E2B5B23A200FF9009 /* SList.cpp */; };
+		C5B3C6622B5B23A200FF9009 /* OptionContainer.inl in Resources */ = {isa = PBXBuildFile; fileRef = C5B3C63F2B5B23A200FF9009 /* OptionContainer.inl */; };
+		C5B3C6632B5B23A200FF9009 /* OptionList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B3C6402B5B23A200FF9009 /* OptionList.cpp */; };
+		C5B3C6642B5B23A200FF9009 /* Options.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B3C6412B5B23A200FF9009 /* Options.cpp */; };
+		C5B3C6652B5B23A200FF9009 /* Easy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B3C6422B5B23A200FF9009 /* Easy.cpp */; };
+		C5B3C6662B5B23A200FF9009 /* Info.inl in Resources */ = {isa = PBXBuildFile; fileRef = C5B3C6452B5B23A200FF9009 /* Info.inl */; };
+		C5B3C6672B5B23A200FF9009 /* cURLpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B3C64C2B5B23A200FF9009 /* cURLpp.cpp */; };
+		C5B3C6682B5B23A200FF9009 /* Easy.inl in Resources */ = {isa = PBXBuildFile; fileRef = C5B3C64E2B5B23A200FF9009 /* Easy.inl */; };
+		C5B3C6692B5B23A200FF9009 /* ThreadingSingle.inl in Resources */ = {isa = PBXBuildFile; fileRef = C5B3C6502B5B23A200FF9009 /* ThreadingSingle.inl */; };
+		C5B3C66A2B5B23A200FF9009 /* Info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B3C6522B5B23A200FF9009 /* Info.cpp */; };
+		C5B3C66B2B5B23A200FF9009 /* Multi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B3C6542B5B23A200FF9009 /* Multi.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C58206662B597B57001AB1ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C58206422B597B55001AB1ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C58206492B597B55001AB1ED;
+			remoteInfo = Books;
+		};
+		C58206702B597B58001AB1ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C58206422B597B55001AB1ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C58206492B597B55001AB1ED;
+			remoteInfo = Books;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C582064A2B597B55001AB1ED /* Books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Books.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C582064D2B597B55001AB1ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C582064E2B597B55001AB1ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C58206502B597B55001AB1ED /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		C58206512B597B55001AB1ED /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		C58206532B597B55001AB1ED /* BooksListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BooksListViewController.h; sourceTree = "<group>"; };
+		C58206542B597B55001AB1ED /* BooksListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BooksListViewController.m; sourceTree = "<group>"; };
+		C58206572B597B55001AB1ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C58206592B597B57001AB1ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C582065C2B597B57001AB1ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C582065E2B597B57001AB1ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C582065F2B597B57001AB1ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C58206652B597B57001AB1ED /* BooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C58206692B597B57001AB1ED /* BooksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BooksTests.m; sourceTree = "<group>"; };
+		C582066F2B597B58001AB1ED /* BooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C58206732B597B58001AB1ED /* BooksUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BooksUITests.m; sourceTree = "<group>"; };
+		C58206752B597B58001AB1ED /* BooksUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BooksUITestsLaunchTests.m; sourceTree = "<group>"; };
+		C58206872B598FB2001AB1ED /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
+		C582068A2B599060001AB1ED /* BookCollectionViewCell.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BookCollectionViewCell.mm; sourceTree = "<group>"; };
+		C582068C2B5990EB001AB1ED /* BookCollectionViewCell.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = BookCollectionViewCell.h; sourceTree = "<group>"; };
+		C58206942B59A2F0001AB1ED /* NetworkProvider.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NetworkProvider.cpp; sourceTree = "<group>"; };
+		C58206952B59A2F0001AB1ED /* NetworkProvider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; path = NetworkProvider.h; sourceTree = "<group>"; };
+		C58206972B59A48B001AB1ED /* BooksService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BooksService.cpp; sourceTree = "<group>"; };
+		C5B3C4AE2B59A91900FF9009 /* BooksService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BooksService.h; sourceTree = "<group>"; };
+		C5B3C4B42B59AF1D00FF9009 /* JSONParser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = JSONParser.cpp; sourceTree = "<group>"; };
+		C5B3C4B52B59AF1D00FF9009 /* JSONParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONParser.h; sourceTree = "<group>"; };
+		C5B3C5FE2B59C5B800FF9009 /* Book.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		C5B3C6092B5AC6CC00FF9009 /* BookModel.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = BookModel.mm; sourceTree = "<group>"; };
+		C5B3C60B2B5ADAD600FF9009 /* BookModel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; path = BookModel.h; sourceTree = "<group>"; };
+		C5B3C60F2B5B005300FF9009 /* ListingResponse.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; path = ListingResponse.h; sourceTree = "<group>"; };
+		C5B3C6152B5B231500FF9009 /* json_writer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json_writer.cpp; sourceTree = "<group>"; };
+		C5B3C6162B5B231500FF9009 /* reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reader.h; sourceTree = "<group>"; };
+		C5B3C6172B5B231500FF9009 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		C5B3C6182B5B231500FF9009 /* assertions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = assertions.h; sourceTree = "<group>"; };
+		C5B3C6192B5B231500FF9009 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		C5B3C61A2B5B231500FF9009 /* json_reader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json_reader.cpp; sourceTree = "<group>"; };
+		C5B3C61B2B5B231500FF9009 /* value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = value.h; sourceTree = "<group>"; };
+		C5B3C61C2B5B231500FF9009 /* json_tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_tool.h; sourceTree = "<group>"; };
+		C5B3C61D2B5B231500FF9009 /* allocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = allocator.h; sourceTree = "<group>"; };
+		C5B3C61E2B5B231500FF9009 /* json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json.h; sourceTree = "<group>"; };
+		C5B3C61F2B5B231500FF9009 /* writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = writer.h; sourceTree = "<group>"; };
+		C5B3C6202B5B231500FF9009 /* json_value.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json_value.cpp; sourceTree = "<group>"; };
+		C5B3C6212B5B231500FF9009 /* json_features.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_features.h; sourceTree = "<group>"; };
+		C5B3C6222B5B231500FF9009 /* json_valueiterator.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_valueiterator.inl; sourceTree = "<group>"; };
+		C5B3C6232B5B231500FF9009 /* forwards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = forwards.h; sourceTree = "<group>"; };
+		C5B3C6292B5B23A200FF9009 /* Form.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Form.cpp; sourceTree = "<group>"; };
+		C5B3C62A2B5B23A200FF9009 /* Info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Info.hpp; sourceTree = "<group>"; };
+		C5B3C62B2B5B23A200FF9009 /* Option.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Option.inl; sourceTree = "<group>"; };
+		C5B3C62C2B5B23A200FF9009 /* OptionBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OptionBase.cpp; sourceTree = "<group>"; };
+		C5B3C62D2B5B23A200FF9009 /* Multi.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Multi.hpp; sourceTree = "<group>"; };
+		C5B3C62E2B5B23A200FF9009 /* ThreadingFactoryMutex.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ThreadingFactoryMutex.inl; sourceTree = "<group>"; };
+		C5B3C62F2B5B23A200FF9009 /* Exception.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Exception.cpp; sourceTree = "<group>"; };
+		C5B3C6302B5B23A200FF9009 /* clone_ptr.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = clone_ptr.hpp; sourceTree = "<group>"; };
+		C5B3C6312B5B23A200FF9009 /* Option.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Option.hpp; sourceTree = "<group>"; };
+		C5B3C6322B5B23A200FF9009 /* ThreadingFactoryMutex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ThreadingFactoryMutex.hpp; sourceTree = "<group>"; };
+		C5B3C6342B5B23A200FF9009 /* OptionSetter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OptionSetter.cpp; sourceTree = "<group>"; };
+		C5B3C6352B5B23A200FF9009 /* SList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SList.hpp; sourceTree = "<group>"; };
+		C5B3C6362B5B23A200FF9009 /* CurlHandle.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CurlHandle.inl; sourceTree = "<group>"; };
+		C5B3C6372B5B23A200FF9009 /* OptionContainerType.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OptionContainerType.hpp; sourceTree = "<group>"; };
+		C5B3C6382B5B23A200FF9009 /* OptionList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OptionList.hpp; sourceTree = "<group>"; };
+		C5B3C6392B5B23A200FF9009 /* CurlHandle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CurlHandle.hpp; sourceTree = "<group>"; };
+		C5B3C63A2B5B23A200FF9009 /* OptionContainer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OptionContainer.hpp; sourceTree = "<group>"; };
+		C5B3C63B2B5B23A200FF9009 /* CurlHandle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CurlHandle.cpp; sourceTree = "<group>"; };
+		C5B3C63C2B5B23A200FF9009 /* OptionSetter.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OptionSetter.inl; sourceTree = "<group>"; };
+		C5B3C63D2B5B23A200FF9009 /* OptionSetter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OptionSetter.hpp; sourceTree = "<group>"; };
+		C5B3C63E2B5B23A200FF9009 /* SList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SList.cpp; sourceTree = "<group>"; };
+		C5B3C63F2B5B23A200FF9009 /* OptionContainer.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OptionContainer.inl; sourceTree = "<group>"; };
+		C5B3C6402B5B23A200FF9009 /* OptionList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OptionList.cpp; sourceTree = "<group>"; };
+		C5B3C6412B5B23A200FF9009 /* Options.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Options.cpp; sourceTree = "<group>"; };
+		C5B3C6422B5B23A200FF9009 /* Easy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Easy.cpp; sourceTree = "<group>"; };
+		C5B3C6432B5B23A200FF9009 /* TypeTrait.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TypeTrait.hpp; sourceTree = "<group>"; };
+		C5B3C6442B5B23A200FF9009 /* TypeList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TypeList.hpp; sourceTree = "<group>"; };
+		C5B3C6452B5B23A200FF9009 /* Info.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Info.inl; sourceTree = "<group>"; };
+		C5B3C6462B5B23A200FF9009 /* NullType.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NullType.hpp; sourceTree = "<group>"; };
+		C5B3C6472B5B23A200FF9009 /* cURLpp.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = cURLpp.hpp; sourceTree = "<group>"; };
+		C5B3C6482B5B23A200FF9009 /* SmartPtr.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SmartPtr.hpp; sourceTree = "<group>"; };
+		C5B3C6492B5B23A200FF9009 /* Options.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Options.hpp; sourceTree = "<group>"; };
+		C5B3C64A2B5B23A200FF9009 /* Easy.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Easy.hpp; sourceTree = "<group>"; };
+		C5B3C64B2B5B23A200FF9009 /* Infos.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Infos.hpp; sourceTree = "<group>"; };
+		C5B3C64C2B5B23A200FF9009 /* cURLpp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cURLpp.cpp; sourceTree = "<group>"; };
+		C5B3C64D2B5B23A200FF9009 /* ThreadingSingle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ThreadingSingle.hpp; sourceTree = "<group>"; };
+		C5B3C64E2B5B23A200FF9009 /* Easy.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Easy.inl; sourceTree = "<group>"; };
+		C5B3C64F2B5B23A200FF9009 /* Form.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Form.hpp; sourceTree = "<group>"; };
+		C5B3C6502B5B23A200FF9009 /* ThreadingSingle.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ThreadingSingle.inl; sourceTree = "<group>"; };
+		C5B3C6512B5B23A200FF9009 /* Types.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Types.hpp; sourceTree = "<group>"; };
+		C5B3C6522B5B23A200FF9009 /* Info.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Info.cpp; sourceTree = "<group>"; };
+		C5B3C6532B5B23A200FF9009 /* OptionBase.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OptionBase.hpp; sourceTree = "<group>"; };
+		C5B3C6542B5B23A200FF9009 /* Multi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Multi.cpp; sourceTree = "<group>"; };
+		C5B3C6552B5B23A200FF9009 /* EmptyType.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EmptyType.hpp; sourceTree = "<group>"; };
+		C5B3C6562B5B23A200FF9009 /* Exception.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Exception.hpp; sourceTree = "<group>"; };
+		C5B3C6572B5B23A200FF9009 /* NonCopyable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NonCopyable.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C58206472B597B55001AB1ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C58206622B597B57001AB1ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C582066C2B597B58001AB1ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C58206412B597B55001AB1ED = {
+			isa = PBXGroup;
+			children = (
+				C5B3C4AF2B59AC0600FF9009 /* Domain */,
+				C582068E2B599E6F001AB1ED /* Networking */,
+				C582064C2B597B55001AB1ED /* Books */,
+				C58206682B597B57001AB1ED /* BooksTests */,
+				C58206722B597B58001AB1ED /* BooksUITests */,
+				C5B3C5D92B59BE0F00FF9009 /* libs */,
+				C582064B2B597B55001AB1ED /* Products */,
+				C5B3C4B72B59B0D800FF9009 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C582064B2B597B55001AB1ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C582064A2B597B55001AB1ED /* Books.app */,
+				C58206652B597B57001AB1ED /* BooksTests.xctest */,
+				C582066F2B597B58001AB1ED /* BooksUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C582064C2B597B55001AB1ED /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				C5B3C6082B5AC6BB00FF9009 /* Domain */,
+				C58206862B598F9F001AB1ED /* UI */,
+				C58206832B5984DA001AB1ED /* App */,
+				C58206532B597B55001AB1ED /* BooksListViewController.h */,
+				C58206542B597B55001AB1ED /* BooksListViewController.m */,
+				C58206562B597B55001AB1ED /* Main.storyboard */,
+				C58206592B597B57001AB1ED /* Assets.xcassets */,
+				C582065B2B597B57001AB1ED /* LaunchScreen.storyboard */,
+				C582065E2B597B57001AB1ED /* Info.plist */,
+				C582065F2B597B57001AB1ED /* main.m */,
+			);
+			path = Books;
+			sourceTree = "<group>";
+		};
+		C58206682B597B57001AB1ED /* BooksTests */ = {
+			isa = PBXGroup;
+			children = (
+				C58206692B597B57001AB1ED /* BooksTests.m */,
+			);
+			path = BooksTests;
+			sourceTree = "<group>";
+		};
+		C58206722B597B58001AB1ED /* BooksUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C58206732B597B58001AB1ED /* BooksUITests.m */,
+				C58206752B597B58001AB1ED /* BooksUITestsLaunchTests.m */,
+			);
+			path = BooksUITests;
+			sourceTree = "<group>";
+		};
+		C58206832B5984DA001AB1ED /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C582064D2B597B55001AB1ED /* AppDelegate.h */,
+				C582064E2B597B55001AB1ED /* AppDelegate.m */,
+				C58206502B597B55001AB1ED /* SceneDelegate.h */,
+				C58206512B597B55001AB1ED /* SceneDelegate.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C58206862B598F9F001AB1ED /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C58206892B599047001AB1ED /* BookCollectionViewCell */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C58206892B599047001AB1ED /* BookCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C58206872B598FB2001AB1ED /* BookCollectionViewCell.xib */,
+				C582068A2B599060001AB1ED /* BookCollectionViewCell.mm */,
+				C582068C2B5990EB001AB1ED /* BookCollectionViewCell.h */,
+			);
+			path = BookCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		C582068E2B599E6F001AB1ED /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C5B3C60D2B5AFFBE00FF9009 /* Models */,
+				C5B3C4B32B59AF0700FF9009 /* JSONParser */,
+				C58206932B59A2DC001AB1ED /* NetworkProvider */,
+				C58206922B599EEE001AB1ED /* BookService */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C58206922B599EEE001AB1ED /* BookService */ = {
+			isa = PBXGroup;
+			children = (
+				C58206972B59A48B001AB1ED /* BooksService.cpp */,
+				C5B3C4AE2B59A91900FF9009 /* BooksService.h */,
+			);
+			path = BookService;
+			sourceTree = "<group>";
+		};
+		C58206932B59A2DC001AB1ED /* NetworkProvider */ = {
+			isa = PBXGroup;
+			children = (
+				C58206942B59A2F0001AB1ED /* NetworkProvider.cpp */,
+				C58206952B59A2F0001AB1ED /* NetworkProvider.h */,
+			);
+			path = NetworkProvider;
+			sourceTree = "<group>";
+		};
+		C5B3C4AF2B59AC0600FF9009 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C5B3C5FE2B59C5B800FF9009 /* Book.h */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		C5B3C4B32B59AF0700FF9009 /* JSONParser */ = {
+			isa = PBXGroup;
+			children = (
+				C5B3C4B42B59AF1D00FF9009 /* JSONParser.cpp */,
+				C5B3C4B52B59AF1D00FF9009 /* JSONParser.h */,
+			);
+			path = JSONParser;
+			sourceTree = "<group>";
+		};
+		C5B3C4B72B59B0D800FF9009 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5B3C5D92B59BE0F00FF9009 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				C5B3C6282B5B23A200FF9009 /* curlpp */,
+				C5B3C6142B5B231500FF9009 /* jsoncpp */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		C5B3C6082B5AC6BB00FF9009 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C5B3C6092B5AC6CC00FF9009 /* BookModel.mm */,
+				C5B3C60B2B5ADAD600FF9009 /* BookModel.h */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		C5B3C60D2B5AFFBE00FF9009 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C5B3C60F2B5B005300FF9009 /* ListingResponse.h */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C5B3C6142B5B231500FF9009 /* jsoncpp */ = {
+			isa = PBXGroup;
+			children = (
+				C5B3C6152B5B231500FF9009 /* json_writer.cpp */,
+				C5B3C6162B5B231500FF9009 /* reader.h */,
+				C5B3C6172B5B231500FF9009 /* version.h */,
+				C5B3C6182B5B231500FF9009 /* assertions.h */,
+				C5B3C6192B5B231500FF9009 /* config.h */,
+				C5B3C61A2B5B231500FF9009 /* json_reader.cpp */,
+				C5B3C61B2B5B231500FF9009 /* value.h */,
+				C5B3C61C2B5B231500FF9009 /* json_tool.h */,
+				C5B3C61D2B5B231500FF9009 /* allocator.h */,
+				C5B3C61E2B5B231500FF9009 /* json.h */,
+				C5B3C61F2B5B231500FF9009 /* writer.h */,
+				C5B3C6202B5B231500FF9009 /* json_value.cpp */,
+				C5B3C6212B5B231500FF9009 /* json_features.h */,
+				C5B3C6222B5B231500FF9009 /* json_valueiterator.inl */,
+				C5B3C6232B5B231500FF9009 /* forwards.h */,
+			);
+			path = jsoncpp;
+			sourceTree = "<group>";
+		};
+		C5B3C6282B5B23A200FF9009 /* curlpp */ = {
+			isa = PBXGroup;
+			children = (
+				C5B3C6292B5B23A200FF9009 /* Form.cpp */,
+				C5B3C62A2B5B23A200FF9009 /* Info.hpp */,
+				C5B3C62B2B5B23A200FF9009 /* Option.inl */,
+				C5B3C62C2B5B23A200FF9009 /* OptionBase.cpp */,
+				C5B3C62D2B5B23A200FF9009 /* Multi.hpp */,
+				C5B3C62E2B5B23A200FF9009 /* ThreadingFactoryMutex.inl */,
+				C5B3C62F2B5B23A200FF9009 /* Exception.cpp */,
+				C5B3C6302B5B23A200FF9009 /* clone_ptr.hpp */,
+				C5B3C6312B5B23A200FF9009 /* Option.hpp */,
+				C5B3C6322B5B23A200FF9009 /* ThreadingFactoryMutex.hpp */,
+				C5B3C6332B5B23A200FF9009 /* internal */,
+				C5B3C6412B5B23A200FF9009 /* Options.cpp */,
+				C5B3C6422B5B23A200FF9009 /* Easy.cpp */,
+				C5B3C6432B5B23A200FF9009 /* TypeTrait.hpp */,
+				C5B3C6442B5B23A200FF9009 /* TypeList.hpp */,
+				C5B3C6452B5B23A200FF9009 /* Info.inl */,
+				C5B3C6462B5B23A200FF9009 /* NullType.hpp */,
+				C5B3C6472B5B23A200FF9009 /* cURLpp.hpp */,
+				C5B3C6482B5B23A200FF9009 /* SmartPtr.hpp */,
+				C5B3C6492B5B23A200FF9009 /* Options.hpp */,
+				C5B3C64A2B5B23A200FF9009 /* Easy.hpp */,
+				C5B3C64B2B5B23A200FF9009 /* Infos.hpp */,
+				C5B3C64C2B5B23A200FF9009 /* cURLpp.cpp */,
+				C5B3C64D2B5B23A200FF9009 /* ThreadingSingle.hpp */,
+				C5B3C64E2B5B23A200FF9009 /* Easy.inl */,
+				C5B3C64F2B5B23A200FF9009 /* Form.hpp */,
+				C5B3C6502B5B23A200FF9009 /* ThreadingSingle.inl */,
+				C5B3C6512B5B23A200FF9009 /* Types.hpp */,
+				C5B3C6522B5B23A200FF9009 /* Info.cpp */,
+				C5B3C6532B5B23A200FF9009 /* OptionBase.hpp */,
+				C5B3C6542B5B23A200FF9009 /* Multi.cpp */,
+				C5B3C6552B5B23A200FF9009 /* EmptyType.hpp */,
+				C5B3C6562B5B23A200FF9009 /* Exception.hpp */,
+				C5B3C6572B5B23A200FF9009 /* NonCopyable.hpp */,
+			);
+			path = curlpp;
+			sourceTree = "<group>";
+		};
+		C5B3C6332B5B23A200FF9009 /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				C5B3C6342B5B23A200FF9009 /* OptionSetter.cpp */,
+				C5B3C6352B5B23A200FF9009 /* SList.hpp */,
+				C5B3C6362B5B23A200FF9009 /* CurlHandle.inl */,
+				C5B3C6372B5B23A200FF9009 /* OptionContainerType.hpp */,
+				C5B3C6382B5B23A200FF9009 /* OptionList.hpp */,
+				C5B3C6392B5B23A200FF9009 /* CurlHandle.hpp */,
+				C5B3C63A2B5B23A200FF9009 /* OptionContainer.hpp */,
+				C5B3C63B2B5B23A200FF9009 /* CurlHandle.cpp */,
+				C5B3C63C2B5B23A200FF9009 /* OptionSetter.inl */,
+				C5B3C63D2B5B23A200FF9009 /* OptionSetter.hpp */,
+				C5B3C63E2B5B23A200FF9009 /* SList.cpp */,
+				C5B3C63F2B5B23A200FF9009 /* OptionContainer.inl */,
+				C5B3C6402B5B23A200FF9009 /* OptionList.cpp */,
+			);
+			path = internal;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C58206492B597B55001AB1ED /* Books */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C58206792B597B58001AB1ED /* Build configuration list for PBXNativeTarget "Books" */;
+			buildPhases = (
+				C58206462B597B55001AB1ED /* Sources */,
+				C58206472B597B55001AB1ED /* Frameworks */,
+				C58206482B597B55001AB1ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Books;
+			productName = Books;
+			productReference = C582064A2B597B55001AB1ED /* Books.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C58206642B597B57001AB1ED /* BooksTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C582067C2B597B58001AB1ED /* Build configuration list for PBXNativeTarget "BooksTests" */;
+			buildPhases = (
+				C58206612B597B57001AB1ED /* Sources */,
+				C58206622B597B57001AB1ED /* Frameworks */,
+				C58206632B597B57001AB1ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C58206672B597B57001AB1ED /* PBXTargetDependency */,
+			);
+			name = BooksTests;
+			productName = BooksTests;
+			productReference = C58206652B597B57001AB1ED /* BooksTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C582066E2B597B58001AB1ED /* BooksUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C582067F2B597B58001AB1ED /* Build configuration list for PBXNativeTarget "BooksUITests" */;
+			buildPhases = (
+				C582066B2B597B58001AB1ED /* Sources */,
+				C582066C2B597B58001AB1ED /* Frameworks */,
+				C582066D2B597B58001AB1ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C58206712B597B58001AB1ED /* PBXTargetDependency */,
+			);
+			name = BooksUITests;
+			productName = BooksUITests;
+			productReference = C582066F2B597B58001AB1ED /* BooksUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C58206422B597B55001AB1ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					C58206492B597B55001AB1ED = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					C58206642B597B57001AB1ED = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = C58206492B597B55001AB1ED;
+					};
+					C582066E2B597B58001AB1ED = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = C58206492B597B55001AB1ED;
+					};
+				};
+			};
+			buildConfigurationList = C58206452B597B55001AB1ED /* Build configuration list for PBXProject "Books" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C58206412B597B55001AB1ED;
+			productRefGroup = C582064B2B597B55001AB1ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C58206492B597B55001AB1ED /* Books */,
+				C58206642B597B57001AB1ED /* BooksTests */,
+				C582066E2B597B58001AB1ED /* BooksUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C58206482B597B55001AB1ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C582065D2B597B57001AB1ED /* LaunchScreen.storyboard in Resources */,
+				C5B3C65E2B5B23A200FF9009 /* CurlHandle.inl in Resources */,
+				C5B3C65B2B5B23A200FF9009 /* ThreadingFactoryMutex.inl in Resources */,
+				C5B3C6272B5B231500FF9009 /* json_valueiterator.inl in Resources */,
+				C5B3C6602B5B23A200FF9009 /* OptionSetter.inl in Resources */,
+				C5B3C6592B5B23A200FF9009 /* Option.inl in Resources */,
+				C5B3C6692B5B23A200FF9009 /* ThreadingSingle.inl in Resources */,
+				C5B3C6662B5B23A200FF9009 /* Info.inl in Resources */,
+				C58206882B598FB2001AB1ED /* BookCollectionViewCell.xib in Resources */,
+				C582065A2B597B57001AB1ED /* Assets.xcassets in Resources */,
+				C5B3C6622B5B23A200FF9009 /* OptionContainer.inl in Resources */,
+				C58206582B597B55001AB1ED /* Main.storyboard in Resources */,
+				C5B3C6682B5B23A200FF9009 /* Easy.inl in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C58206632B597B57001AB1ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C582066D2B597B58001AB1ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C58206462B597B55001AB1ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5B3C6252B5B231500FF9009 /* json_reader.cpp in Sources */,
+				C58206992B59A48B001AB1ED /* BooksService.cpp in Sources */,
+				C5B3C6642B5B23A200FF9009 /* Options.cpp in Sources */,
+				C5B3C60A2B5AC6CC00FF9009 /* BookModel.mm in Sources */,
+				C5B3C65F2B5B23A200FF9009 /* CurlHandle.cpp in Sources */,
+				C5B3C6262B5B231500FF9009 /* json_value.cpp in Sources */,
+				C5B3C60C2B5ADAD600FF9009 /* BookModel.h in Sources */,
+				C58206962B59A2F0001AB1ED /* NetworkProvider.cpp in Sources */,
+				C58206552B597B55001AB1ED /* BooksListViewController.m in Sources */,
+				C5B3C65D2B5B23A200FF9009 /* OptionSetter.cpp in Sources */,
+				C582064F2B597B55001AB1ED /* AppDelegate.m in Sources */,
+				C5B3C4B62B59AF1D00FF9009 /* JSONParser.cpp in Sources */,
+				C5B3C6582B5B23A200FF9009 /* Form.cpp in Sources */,
+				C5B3C66B2B5B23A200FF9009 /* Multi.cpp in Sources */,
+				C5B3C6652B5B23A200FF9009 /* Easy.cpp in Sources */,
+				C5B3C6632B5B23A200FF9009 /* OptionList.cpp in Sources */,
+				C5B3C6612B5B23A200FF9009 /* SList.cpp in Sources */,
+				C58206602B597B57001AB1ED /* main.m in Sources */,
+				C58206522B597B55001AB1ED /* SceneDelegate.m in Sources */,
+				C5B3C6242B5B231500FF9009 /* json_writer.cpp in Sources */,
+				C5B3C65C2B5B23A200FF9009 /* Exception.cpp in Sources */,
+				C5B3C65A2B5B23A200FF9009 /* OptionBase.cpp in Sources */,
+				C5B3C66A2B5B23A200FF9009 /* Info.cpp in Sources */,
+				C5B3C6672B5B23A200FF9009 /* cURLpp.cpp in Sources */,
+				C582068B2B599060001AB1ED /* BookCollectionViewCell.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C58206612B597B57001AB1ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C582066A2B597B57001AB1ED /* BooksTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C582066B2B597B58001AB1ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C58206742B597B58001AB1ED /* BooksUITests.m in Sources */,
+				C58206762B597B58001AB1ED /* BooksUITestsLaunchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C58206672B597B57001AB1ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C58206492B597B55001AB1ED /* Books */;
+			targetProxy = C58206662B597B57001AB1ED /* PBXContainerItemProxy */;
+		};
+		C58206712B597B58001AB1ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C58206492B597B55001AB1ED /* Books */;
+			targetProxy = C58206702B597B58001AB1ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C58206562B597B55001AB1ED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C58206572B597B55001AB1ED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C582065B2B597B57001AB1ED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C582065C2B597B57001AB1ED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C58206772B597B58001AB1ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C58206782B597B58001AB1ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C582067A2B597B58001AB1ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VK9JADUS66;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"libs/json/**",
+					"Domain/**",
+					"Books/Domain/**",
+					"Networking/**",
+				);
+				INFOPLIST_FILE = Books/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-lcurl",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.reisdev.Books;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C582067B2B597B58001AB1ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VK9JADUS66;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"libs/json/**",
+					"Domain/**",
+					"Books/Domain/**",
+					"Networking/**",
+				);
+				INFOPLIST_FILE = Books/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-lcurl",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.reisdev.Books;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C582067D2B597B58001AB1ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VK9JADUS66;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.reisdev.BooksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Books.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Books";
+			};
+			name = Debug;
+		};
+		C582067E2B597B58001AB1ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VK9JADUS66;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.reisdev.BooksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Books.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Books";
+			};
+			name = Release;
+		};
+		C58206802B597B58001AB1ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VK9JADUS66;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.reisdev.BooksUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Books;
+			};
+			name = Debug;
+		};
+		C58206812B597B58001AB1ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VK9JADUS66;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.reisdev.BooksUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Books;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C58206452B597B55001AB1ED /* Build configuration list for PBXProject "Books" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C58206772B597B58001AB1ED /* Debug */,
+				C58206782B597B58001AB1ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C58206792B597B58001AB1ED /* Build configuration list for PBXNativeTarget "Books" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C582067A2B597B58001AB1ED /* Debug */,
+				C582067B2B597B58001AB1ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C582067C2B597B58001AB1ED /* Build configuration list for PBXNativeTarget "BooksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C582067D2B597B58001AB1ED /* Debug */,
+				C582067E2B597B58001AB1ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C582067F2B597B58001AB1ED /* Build configuration list for PBXNativeTarget "BooksUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C58206802B597B58001AB1ED /* Debug */,
+				C58206812B597B58001AB1ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C58206422B597B55001AB1ED /* Project object */;
+}
