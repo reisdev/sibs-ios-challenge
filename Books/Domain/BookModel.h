@@ -8,15 +8,21 @@
 #import <Foundation/Foundation.h>
 
 typedef enum {
-    small,
-    regular
+    smallThumbnail,
+    regularThumbnail,
 } Thumbnail;
 
 @interface BookModel: NSObject
 
+- (instancetype)initWithPointer:(long)pointer;
 
+- (NSString*)id;
 - (NSString*)title;
-- (NSString*)description;
+- (NSString*)bookDescription;
 - (NSString*)authors;
 - (NSString*)getThumbnail:(Thumbnail)size;
+- (NSURL*)buyLink;
+
++ (instancetype) mock;
+
 @end

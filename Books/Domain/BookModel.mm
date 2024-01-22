@@ -6,31 +6,57 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Domain/Book.h"
 #import "BookModel.h"
-#import "Book.h"
 
 @interface BookModel () {
-    Domain::Book book;
+    Domain::Book* book;
 }
-
 @end
 
 @implementation BookModel
 
-- (NSString*) title {
-    return @(book.volumeInfo.title.c_str());
+- (instancetype)initWithPointer:(long)pointer {
+    self->book = (Domain::Book*) pointer;
+    return self;
 }
-- (NSString*) description {
-    return @(book.volumeInfo.description.c_str());
+
++ (BookModel*) mock {
+
+    Domain::Book* book = new Domain::Book();
+
+    Domain::VolumeInfo* volumeInfo = new Domain::VolumeInfo();
+    volumeInfo->title = "Livro de teste";
+    book->id = "test";
+    book->volumeInfo = volumeInfo;
+
+    BookModel* result = [BookModel alloc];
+    result->book = book;
+
+    return result;
+}
+
+- (NSString*) id {
+    return [NSString stringWithUTF8String: book->id.c_str()];
+}
+
+- (NSString*) title {
+    if(!book) { return @""; }
+
+    return [NSString stringWithUTF8String: book->volumeInfo->title.c_str()];
+}
+
+- (NSString*) bookDescription {
+    return [NSString stringWithUTF8String: book->volumeInfo->description.c_str()];
 }
 
 - (NSString*) authors {
-    NSString * authors;
-    for(int i = 0; i < book.volumeInfo.authors.size(); i++) {
+    NSString * authors = @("");
+    for(int i = 0; i < book->volumeInfo->authors.size(); i++) {
         if(i > 0) {
             authors = [authors stringByAppendingString: @", "];
         }
-        authors = [authors stringByAppendingString: @(book.volumeInfo.authors[i].c_str())];
+        authors = [authors stringByAppendingString: [NSString stringWithUTF8String: book->volumeInfo->authors[i].c_str()]];
     }
 
     return authors;
@@ -38,11 +64,19 @@
 
 - (NSString *)getThumbnail:(Thumbnail)size {
     switch (size) {
-        case small:
-            return @(book.imageLinks.smallThumbnail.c_str());
-        case regular:
-            return @(book.imageLinks.thumbnail.c_str());
+        case smallThumbnail:
+            return [NSString stringWithUTF8String: book->volumeInfo->imageLinks->smallThumbnail.c_str()];
+        default:
+            return [NSString stringWithUTF8String: book->volumeInfo->imageLinks->thumbnail.c_str()];
     }
+}
+
+- (NSURL*)buyLink {
+    if(!book->saleInfo->buyLink.has_value()) {
+        return nil;
+    }
+
+    return [NSURL URLWithString: @(book->saleInfo->buyLink.value().c_str())];
 }
 
 @end

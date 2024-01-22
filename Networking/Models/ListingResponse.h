@@ -18,7 +18,11 @@ namespace Networking {
         public:
             std::string kind;
             int totalItems;
-            std::vector<T> items;
+            std::vector<T*> items;
+
+        long pointer() {
+            return (long) this;
+        }
     };
 }
 

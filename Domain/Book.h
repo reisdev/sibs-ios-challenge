@@ -5,7 +5,7 @@
 //  Created by Matheus dos Reis de Jesus on 18/01/24.
 //
 
-#ifdef __cplusplus
+#if __cplusplus
 
 #ifndef Book_h
 #define Book_h
@@ -14,30 +14,34 @@
 #include <vector>
 
 namespace Domain {
-    struct ImageLinks {
+    class ImageLinks {
         public:
             std::string smallThumbnail;
             std::string thumbnail;
     };
 
-    struct VolumeInfo {
+    class VolumeInfo {
         public:
             std::string title;
             std::vector<std::string> authors;
             std::string description;
+            ImageLinks* imageLinks;
     };
 
-    struct SaleInfo {
+    class SaleInfo {
         public:
             std::optional<std::string> buyLink;
     };
 
-    struct Book {
+    class Book {
         public:
             std::string id;
-            VolumeInfo volumeInfo;
-            ImageLinks imageLinks;
-            SaleInfo saleInfo;
+            VolumeInfo* volumeInfo;
+            SaleInfo* saleInfo;
+
+        long pointer() {
+            return (long) this;
+        }
     };
 }
 

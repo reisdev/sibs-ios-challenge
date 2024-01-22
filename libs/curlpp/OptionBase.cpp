@@ -22,7 +22,7 @@
  */
 
 
-#include "OptionBase.hpp"
+#include "curlpp/OptionBase.hpp"
 
 curlpp::OptionBase::OptionBase(CURLoption option)
   : mOption(option)

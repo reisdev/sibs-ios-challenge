@@ -7,7 +7,6 @@
 
 #import <UIKit/UIKit.h>
 #import "BookCollectionViewCell.h"
-#import "BookModel.h"
 
 @interface BookCollectionViewCell ()
 
@@ -15,15 +14,31 @@
 
 @implementation BookCollectionViewCell
 
-- (instancetype)setupWithBookModel:(const BookModel *)bookModel {
-    titleLabel.text = bookModel.title;
-    
-
-    return self;
-}
-
 + (NSString *)reuseIdentifier {
     return @"BookCollectionViewCell";
+}
+
+- (void)setupWithBookModel:(const BookModel *)bookModel {
+    _titleLabel.text = bookModel.title;
+}
+
+- (void)setupImageWith:(UIImage*)image {
+
+    self->_imageView.layer.cornerRadius = 8.0;
+    self->_imageView.layer.masksToBounds = true;
+
+    self->_imageView.image = image;
+}
+
+- (void)toggleLoading {
+    if(self->_activityIndicator.isAnimating) {
+        [self->_activityIndicator stopAnimating];
+        [self->_activityIndicator setHidden:true];
+    } else {
+        self->_imageView.image = nil;
+        [self->_activityIndicator startAnimating];
+        [self->_activityIndicator setHidden:false];
+    }
 }
 
 @end

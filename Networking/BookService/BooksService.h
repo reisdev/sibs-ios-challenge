@@ -5,21 +5,29 @@
 //  Created by Matheus dos Reis de Jesus on 18/01/24.
 //
 
+#if __cplusplus
+
 #ifndef BOOKS_SERVICE_h
 #define BOOKS_SERVICE_h
 
-#import "NetworkProvider.h"
-#import "Book.h"
+#include "Networking/Provider/NetworkProvider.h"
+#include "Networking/Models/BookListingResponse.h"
+#include "Domain/Book.h"
+#include "Domain/JSONParser/JSONParser.h"
 
-class BooksService {
-    private:
-        NetworkProvider * provider;
+namespace Networking {
+    class BooksService {
+        private:
+            NetworkProvider* provider;
+            JSONParser parser;
 
-    public:
+        public:
 
-    BooksService(NetworkProvider * provider);
+        BooksService(NetworkProvider* provider);
 
-    vector<Domain::Book> fetchList(string query, int maxResults, int startIndex);
-};
+        BookListingResponse* fetchList(std::string query, int maxResults, int startIndex);
+    };
+}
 
 #endif /* BooksService_hpp */
+#endif

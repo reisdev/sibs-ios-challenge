@@ -5,36 +5,41 @@
 //  Created by Matheus dos Reis de Jesus on 18/01/24.
 //
 
+#if __cplusplus
+
 #include <string>
 #include <vector>
 
-#include "NetworkProvider.h"
+#include "BookListingResponse.h"
 #include "BooksService.h"
-#include "ListingResponse.h"
 
-using namespace std;
+using namespace Networking;
 
 BooksService::BooksService(NetworkProvider* provider) {
     this->provider = provider;
 }
 
-vector<Domain::Book> BooksService::fetchList(string query, int maxResults, int startIndex) {
-
-    string queryString = "?";
+BookListingResponse* BooksService::fetchList(std::string query, int maxResults, int startIndex) {
+    std::string queryString = "?";
 
     if(!query.empty()) {
         queryString += "&q=" + query;
     }
 
     if(maxResults) {
-        queryString += "&maxResults=" + to_string(maxResults);
+        queryString += "&maxResults=" + std::to_string(maxResults);
     }
 
     if(startIndex) {
-        queryString += "&startIndex=" + to_string(startIndex);
+        queryString += "&startIndex=" + std::to_string(startIndex);
     }
 
-    auto response = this->provider->fetch<Networking::ListingResponse<Domain::Book>>(queryString);
+    std::string response = this->provider->fetch(queryString);
 
-    return response.items;
+    BookListingResponse* result = new BookListingResponse;
+    parser.parse(response, *result);
+
+    return result;
 }
+
+#endif

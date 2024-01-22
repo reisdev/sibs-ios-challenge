@@ -8,12 +8,17 @@
 #import <UIKit/UIKit.h>
 #import "BookModel.h"
 
-@interface BookCollectionViewCell : UICollectionViewCell {
-
-    IBOutlet UIImageView* imageView;
-    IBOutlet UILabel* titleLabel;
+@interface BookCollectionViewCell: UICollectionViewCell {
+    
 }
 
-- (instancetype)setupWithBookModel:(const BookModel *) bookModel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+
++ (NSString*) reuseIdentifier;
+- (void)setupWithBookModel:(const BookModel *)model;
+- (void)setupImageWith:(UIImage*)image;
+- (void)toggleLoading;
 
 @end

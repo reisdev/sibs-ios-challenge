@@ -24,9 +24,7 @@
 #ifndef CURLPP_OPTION_BASE_HPP
 #define CURLPP_OPTION_BASE_HPP
 
-
-
-#include <curl.h>
+#include <curl/curl.h>
 
 
 namespace curlpp
